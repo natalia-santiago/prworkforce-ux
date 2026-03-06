@@ -1,4 +1,64 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
+function encode(data: Record<string, string>) {
+  return Object.keys(data)
+    .map(
+      (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+    )
+    .join("&");
+}
+
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      "form-name": "contact",
+      "bot-field": String(formData.get("bot-field") || ""),
+      name: String(formData.get("name") || ""),
+      phone: String(formData.get("phone") || ""),
+      email: String(formData.get("email") || ""),
+      inquiryType: String(formData.get("inquiryType") || ""),
+      location: String(formData.get("location") || ""),
+      message: String(formData.get("message") || ""),
+    };
+
+    try {
+      setIsSubmitting(true);
+      setErrorMessage("");
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encode(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed.");
+      }
+
+      form.reset();
+      setIsSuccess(true);
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("There was a problem sending your message. Please try again.");
+      setIsSuccess(false);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-[1100px] px-6 py-14 md:py-16">
@@ -90,11 +150,24 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-[28px] border border-black/10 bg-white p-6 shadow-sm md:p-8">
+            {isSuccess && (
+              <div className="mb-5 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">
+                Your message has been sent successfully.
+              </div>
+            )}
+
+            {errorMessage && (
+              <div className="mb-5 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                {errorMessage}
+              </div>
+            )}
+
             <form
               name="contact"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
               className="grid gap-5"
             >
               <input type="hidden" name="form-name" value="contact" />
@@ -163,6 +236,7 @@ export default function ContactPage() {
                     name="inquiryType"
                     required
                     className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 outline-none focus:border-[#c71f25]"
+                    defaultValue=""
                   >
                     <option value="">Select one</option>
                     <option value="hire-staff">Hire staff</option>
@@ -208,9 +282,10 @@ export default function ContactPage() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="rounded-full bg-[#c71f25] px-7 py-3 text-sm font-semibold text-white hover:bg-[#a8171c]"
+                  disabled={isSubmitting}
+                  className="rounded-full bg-[#c71f25] px-7 py-3 text-sm font-semibold text-white hover:bg-[#a8171c] disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </form>
