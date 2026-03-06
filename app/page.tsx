@@ -38,18 +38,18 @@ const hiringAreas = [
 ];
 
 const jobs = [
-  "/images/jobs/job01.jpeg",
-  "/images/jobs/job02.jpeg",
-  "/images/jobs/job03.jpeg",
-  "/images/jobs/job04.jpeg",
+  "/images/jobs/job01.png",
+  "/images/jobs/job02.png",
+  "/images/jobs/job03.png",
+  "/images/jobs/job04.png",
   "/images/jobs/job05.jpeg",
-  "/images/jobs/job06.jpeg",
-  "/images/jobs/job07.jpeg",
-  "/images/jobs/job08.jpeg",
-  "/images/jobs/job09.jpeg",
+  "/images/jobs/job06.png",
+  "/images/jobs/job07.png",
+  "/images/jobs/job08.png",
+  "/images/jobs/job09.png",
   "/images/jobs/job10.jpeg",
-  "/images/jobs/job11.jpeg",
-  "/images/jobs/job12.jpeg",
+  "/images/jobs/job11.png",
+  "/images/jobs/job12.png",
 ];
 
 export default function Home() {
