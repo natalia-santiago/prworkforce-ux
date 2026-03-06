@@ -93,9 +93,9 @@ export default function ContactPage() {
             <form
               name="contact"
               method="POST"
-              action="/thank-you"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              action="/thank-you"
               className="grid gap-5"
             >
               <input type="hidden" name="form-name" value="contact" />
