@@ -1,61 +1,45 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 
 function encode(data: Record<string, string>) {
   return Object.keys(data)
-    .map(
-      (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-    )
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key] ?? "")}`)
     .join("&");
 }
 
 export default function ContactPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setStatus("submitting");
 
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const payload = {
-      "form-name": "contact",
-      "bot-field": String(formData.get("bot-field") || ""),
-      name: String(formData.get("name") || ""),
-      phone: String(formData.get("phone") || ""),
-      email: String(formData.get("email") || ""),
-      inquiryType: String(formData.get("inquiryType") || ""),
-      location: String(formData.get("location") || ""),
-      message: String(formData.get("message") || ""),
-    };
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      data[key] = String(value);
+    });
+
+    data["form-name"] = "contact";
 
     try {
-      setIsSubmitting(true);
-      setErrorMessage("");
-
-      const response = await fetch("/", {
+      const res = await fetch("/netlify-forms.html", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: encode(payload),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(data),
       });
 
-      if (!response.ok) {
-        throw new Error("Submission failed.");
+      if (!res.ok) {
+        throw new Error(`Netlify forms POST failed: ${res.status}`);
       }
 
-      form.reset();
-      setIsSuccess(true);
-    } catch (error) {
-      console.error(error);
-      setErrorMessage("There was a problem sending your message. Please try again.");
-      setIsSuccess(false);
-    } finally {
-      setIsSubmitting(false);
+      window.location.assign("/thank-you");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
     }
   }
 
@@ -150,28 +134,23 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-[28px] border border-black/10 bg-white p-6 shadow-sm md:p-8">
-            {isSuccess && (
-              <div className="mb-5 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">
-                Your message has been sent successfully.
-              </div>
-            )}
-
-            {errorMessage && (
-              <div className="mb-5 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
-                {errorMessage}
-              </div>
-            )}
-
             <form
               name="contact"
               method="POST"
+              action="/netlify-forms.html"
+              encType="application/x-www-form-urlencoded"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="grid gap-5"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
+
+              <div className="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </div>
 
               <div className="grid gap-5 md:grid-cols-2">
                 <div>
@@ -186,6 +165,7 @@ export default function ContactPage() {
                     name="name"
                     type="text"
                     required
+                    autoComplete="name"
                     className="w-full rounded-xl border border-black/15 px-4 py-3 outline-none focus:border-[#c71f25]"
                   />
                 </div>
@@ -202,6 +182,7 @@ export default function ContactPage() {
                     name="phone"
                     type="tel"
                     required
+                    autoComplete="tel"
                     className="w-full rounded-xl border border-black/15 px-4 py-3 outline-none focus:border-[#c71f25]"
                   />
                 </div>
@@ -220,6 +201,7 @@ export default function ContactPage() {
                     name="email"
                     type="email"
                     required
+                    autoComplete="email"
                     className="w-full rounded-xl border border-black/15 px-4 py-3 outline-none focus:border-[#c71f25]"
                   />
                 </div>
@@ -235,8 +217,8 @@ export default function ContactPage() {
                     id="inquiryType"
                     name="inquiryType"
                     required
-                    className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 outline-none focus:border-[#c71f25]"
                     defaultValue=""
+                    className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 outline-none focus:border-[#c71f25]"
                   >
                     <option value="">Select one</option>
                     <option value="hire-staff">Hire staff</option>
@@ -279,13 +261,20 @@ export default function ContactPage() {
                 />
               </div>
 
+              {status === "error" && (
+                <p className="text-sm text-red-600">
+                  Something went wrong sending your message. Please try again or
+                  call (252) 282-6094.
+                </p>
+              )}
+
               <div className="pt-2">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="rounded-full bg-[#c71f25] px-7 py-3 text-sm font-semibold text-white hover:bg-[#a8171c] disabled:cursor-not-allowed disabled:opacity-70"
+                  disabled={status === "submitting"}
+                  className="rounded-full bg-[#c71f25] px-7 py-3 text-sm font-semibold text-white hover:bg-[#a8171c] disabled:opacity-60"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {status === "submitting" ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </form>
