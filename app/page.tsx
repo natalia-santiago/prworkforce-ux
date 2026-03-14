@@ -67,14 +67,8 @@ export default function Home() {
               Skilled Trades Staffing in North Carolina
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-[#111111] md:text-5xl lg:text-6xl">
-              Reliable staffing support
-              <br />
-              for skilled trades.
-            </h1>
-
             <p className="mt-6 max-w-2xl text-lg leading-8 text-black/70">
-              P&amp;R Workforce is a reliable staffing company based out of
+              P&amp;R Workforce is a reliable staffing company based in
               Goldsboro, serving Raleigh, Goldsboro, Wilmington, and
               surrounding North Carolina areas. We support hiring across
               electrical, HVAC, plumbing, drywall, flooring, tile, and other
