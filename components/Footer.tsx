@@ -57,8 +57,19 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-2 px-6 py-5 text-sm text-white/50 md:flex-row md:items-center md:justify-between">
-          <p>© {year} P&amp;R Workforce LLC. All rights reserved.</p>
-          <p>Skilled Trades Staffing in North Carolina</p>
+          <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
+            <p>© {year} P&amp;R Workforce LLC. All rights reserved.</p>
+            <p>Skilled Trades Staffing in North Carolina</p>
+          </div>
+
+          <a
+            href="https://natalia-santiago-portfolio.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white"
+          >
+            Website by Natalia Santiago
+          </a>
         </div>
       </div>
     </footer>
