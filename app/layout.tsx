@@ -35,6 +35,8 @@ export const metadata: Metadata = {
     "Wilmington NC staffing",
     "North Carolina staffing company",
     "job opportunities North Carolina",
+    "temporary staffing North Carolina",
+    "direct hire recruiting North Carolina",
   ],
 
   alternates: {

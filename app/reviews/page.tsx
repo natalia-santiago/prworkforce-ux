@@ -25,6 +25,11 @@ export default function ReviewsPage() {
             staffing support or if you are looking for your next job
             opportunity.
           </p>
+
+          <p>
+            We appreciate every opportunity to support businesses with workforce
+            needs and help job seekers connect with the right fit.
+          </p>
         </div>
 
         <div className="mt-10 flex flex-wrap gap-4">

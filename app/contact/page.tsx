@@ -108,7 +108,7 @@ export default function ContactPage() {
                 <p className="font-semibold text-white">For employers</p>
                 <p className="mt-2 leading-7 text-white/75">
                   Tell us about your staffing needs, timeline, project type,
-                  trade, and service area.
+                  trade, headcount, and service area.
                 </p>
               </div>
 
@@ -256,7 +256,7 @@ export default function ContactPage() {
                   name="message"
                   rows={7}
                   required
-                  placeholder="Tell us what you need or share your work experience, trade, and availability."
+                  placeholder="Tell us what you need or share your work experience, trade, availability, and any helpful details."
                   className="w-full rounded-xl border border-black/15 px-4 py-3 outline-none focus:border-[#c71f25]"
                 />
               </div>

@@ -68,18 +68,37 @@ export default function Home() {
             </p>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-[#111111] md:text-5xl lg:text-6xl">
-              Built in reliability,
+              Reliable staffing support
               <br />
-              Driven by Quality.
+              for skilled trades.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-black/70">
               P&amp;R Workforce is a reliable staffing company based out of
-              Goldsboro, serving Raleigh, Goldsboro, and Wilmington in North
-              Carolina. We support hiring across electrical, HVAC, plumbing,
-              drywall, flooring, tile, and other skilled trades while helping
-              job seekers connect with the right opportunities.
+              Goldsboro, serving Raleigh, Goldsboro, Wilmington, and
+              surrounding North Carolina areas. We support hiring across
+              electrical, HVAC, plumbing, drywall, flooring, tile, and other
+              skilled trades while helping job seekers connect with the right
+              opportunities.
             </p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {[
+                "Electrical",
+                "HVAC",
+                "Plumbing",
+                "Drywall",
+                "Flooring",
+                "Tile",
+              ].map((trade) => (
+                <span
+                  key={trade}
+                  className="rounded-full border border-black/10 bg-[#f8f8f8] px-3 py-1.5 text-sm text-black/70"
+                >
+                  {trade}
+                </span>
+              ))}
+            </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
@@ -117,6 +136,39 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-b border-black/10 bg-[#fafafa]">
+        <div className="mx-auto max-w-[1400px] px-6 py-6">
+          <div className="grid gap-4 text-sm text-black/70 md:grid-cols-3">
+            <div className="rounded-2xl border border-black/10 bg-white px-5 py-4">
+              <span className="font-semibold text-[#111111]">
+                Multi-trade staffing
+              </span>
+              <p className="mt-1">
+                Support across electrical, HVAC, plumbing, drywall, flooring,
+                tile, and more.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-black/10 bg-white px-5 py-4">
+              <span className="font-semibold text-[#111111]">
+                For employers and job seekers
+              </span>
+              <p className="mt-1">
+                We help businesses hire and help workers find the right fit.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-black/10 bg-white px-5 py-4">
+              <span className="font-semibold text-[#111111]">
+                Based in Goldsboro, NC
+              </span>
+              <p className="mt-1">
+                Serving Raleigh, Wilmington, and surrounding North Carolina
+                areas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="border-b border-black/10 bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-14">
           <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
@@ -133,7 +185,8 @@ export default function Home() {
               <p className="mt-5 max-w-3xl text-base leading-8 text-black/75">
                 At P &amp; R Workforce LLC, we believe strong connections build
                 strong futures — on the job site and beyond. We are a staffing
-                company you can count on. Success is built one connection at a
+                company you can count on for dependable workforce support and
+                reliable opportunities. Success is built one connection at a
                 time.
               </p>
 
@@ -219,9 +272,16 @@ export default function Home() {
 
       <section className="border-b border-black/10 bg-[#fafafa]">
         <div className="mx-auto max-w-[1400px] px-6 py-14">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c71f25]">
-            Services Offered
-          </p>
+          <div className="flex items-end justify-between gap-6">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c71f25]">
+                Services Offered
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#111111] md:text-4xl">
+                Staffing solutions built around your project needs.
+              </h2>
+            </div>
+          </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {servicesOffered.map((service) => (
@@ -273,7 +333,7 @@ export default function Home() {
                 href="/contact"
                 className="mt-8 inline-flex rounded-full bg-[#c71f25] px-6 py-3 text-sm font-semibold text-white hover:bg-[#a8171c]"
               >
-                Find Work
+                Apply for Opportunities
               </Link>
             </div>
 
@@ -308,7 +368,7 @@ export default function Home() {
                 href="/contact"
                 className="mt-8 inline-flex rounded-full border border-[#111111] px-6 py-3 text-sm font-semibold text-[#111111] hover:bg-black hover:text-white"
               >
-                Request Staff
+                Request Staffing Support
               </Link>
             </div>
           </div>
@@ -361,11 +421,11 @@ export default function Home() {
                 Contact P&amp;R Workforce
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#111111] md:text-4xl">
-                Let us know what services you’re looking for.
+                Let us know what type of staffing support you need.
               </h2>
               <p className="mt-4 max-w-3xl text-base leading-8 text-black/75">
-                Whether you need staffing support or are looking to get hired,
-                our team is ready to hear from you.
+                Whether you need workers for your next project or are looking
+                for your next opportunity, our team is ready to hear from you.
               </p>
             </div>
 
@@ -451,10 +511,10 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 text-base leading-8 text-black/75">
-              P&amp;R Workforce is a staffing company proudly serving
-              Goldsboro, Raleigh, Wilmington, and surrounding North Carolina
-              areas. Our Google Business Profile will be available soon where
-              clients and job seekers can leave reviews and feedback.
+              P&amp;R Workforce is a staffing company proudly serving Goldsboro,
+              Raleigh, Wilmington, and surrounding North Carolina areas. Our
+              Google Business Profile will be available soon where clients and
+              job seekers can leave reviews and feedback.
             </p>
 
             <p className="mt-4 text-base leading-8 text-black/75">
@@ -462,6 +522,15 @@ export default function Home() {
               staffing support or if you are looking for your next job
               opportunity.
             </p>
+
+            <div className="mt-6">
+              <Link
+                href="/reviews"
+                className="inline-flex rounded-full border border-black/15 px-5 py-2.5 text-sm font-semibold text-[#111111] hover:bg-[#f5f5f5]"
+              >
+                Visit Reviews Page
+              </Link>
+            </div>
           </div>
         </div>
       </section>
