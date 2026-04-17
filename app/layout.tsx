@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "P&R Workforce LLC | Skilled Trades Staffing in Goldsboro, Raleigh & Wilmington NC",
-    template: "%s | P&R Workforce LLC",
+      "P&R Workforce UX Concept | Portfolio Case Study",
+    template: "%s | P&R Workforce UX Concept",
   },
 
   description:
-    "P&R Workforce LLC is a reliable staffing company based in Goldsboro, NC serving Raleigh, Wilmington, and surrounding North Carolina areas. We connect businesses with dependable workers and help job seekers find opportunities across electrical, HVAC, plumbing, drywall, flooring, tile, and other skilled trades.",
+    "UX redesign concept of the P&R Workforce website created as a portfolio case study, focused on improving layout, hierarchy, and user experience.",
 
   keywords: [
     "staffing company",
@@ -43,10 +43,15 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
 
+  // ✅ FIXED FAVICON SETUP
   icons: {
-    icon: "/images/logo.jpeg",
-    shortcut: "/images/logo.jpeg",
-    apple: "/images/logo.jpeg",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 
   openGraph: {

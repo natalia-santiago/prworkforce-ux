@@ -4,9 +4,12 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-6 py-4">
-        <Link href="/" className="flex items-center gap-4">
-          <div className="relative h-16 w-16 overflow-hidden rounded-full border border-black/10 bg-black">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 sm:py-4 lg:gap-6 lg:px-8 lg:py-[1.15rem]">
+        <Link
+          href="/"
+          className="flex min-w-0 items-center gap-3 transition-opacity hover:opacity-90 sm:gap-4"
+        >
+          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-black/10 bg-black shadow-sm sm:h-14 sm:w-14 lg:h-16 lg:w-16">
             <Image
               src="/images/logo-cropped.jpeg"
               alt="P&R Workforce LLC logo"
@@ -16,38 +19,38 @@ export default function Header() {
             />
           </div>
 
-          <div>
-            <p className="text-[1.2rem] font-semibold tracking-tight text-[#111111]">
+          <div className="min-w-0">
+            <p className="truncate text-[0.98rem] font-semibold tracking-tight text-[#111111] sm:text-[1.08rem] lg:text-[1.24rem]">
               P&amp;R Workforce LLC
             </p>
-            <p className="text-xs uppercase tracking-[0.26em] text-black/50">
+            <p className="mt-0.5 text-[0.6rem] uppercase tracking-[0.22em] text-black/50 sm:text-[0.68rem] lg:text-xs lg:tracking-[0.28em]">
               Staffing Company
             </p>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 md:flex lg:gap-9">
           <Link
             href="/"
-            className="text-sm font-medium text-[#111111] hover:text-[#c71f25]"
+            className="text-[0.95rem] font-medium text-[#111111] transition hover:text-[#c71f25]"
           >
             Home
           </Link>
           <Link
             href="/contact"
-            className="text-sm font-medium text-[#111111] hover:text-[#c71f25]"
+            className="text-[0.95rem] font-medium text-[#111111] transition hover:text-[#c71f25]"
           >
             Contact
           </Link>
           <Link
             href="/reviews"
-            className="text-sm font-medium text-[#111111] hover:text-[#c71f25]"
+            className="text-[0.95rem] font-medium text-[#111111] transition hover:text-[#c71f25]"
           >
             Reviews
           </Link>
           <a
             href="tel:+12525826094"
-            className="rounded-full bg-[#111111] px-5 py-2.5 text-sm font-semibold text-white hover:bg-black"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#c71f25] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#a8171c] hover:shadow-md"
           >
             (252) 582-6094
           </a>
@@ -55,7 +58,7 @@ export default function Header() {
 
         <Link
           href="/contact"
-          className="rounded-full bg-[#c71f25] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#a8171c] md:hidden"
+          className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-full bg-[#c71f25] px-4 py-2 text-[0.88rem] font-semibold text-white shadow-sm transition hover:bg-[#a8171c] sm:min-h-11 sm:px-5 sm:py-2.5 sm:text-sm md:hidden"
         >
           Contact
         </Link>
