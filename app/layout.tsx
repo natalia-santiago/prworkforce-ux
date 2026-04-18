@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "P&R Workforce UX Concept | Portfolio Case Study",
+      "P&R Workforce UX Exploration | Natalia Santiago",
     template: "%s | P&R Workforce UX Concept",
   },
 
   description:
-    "UX redesign concept of the P&R Workforce website created as a portfolio case study, focused on improving layout, hierarchy, and user experience.",
+    "UX exploration of the P&R Workforce website, presenting an alternative design direction focused on layout, visual hierarchy, and user flow while working within the same content and business goals.",
 
   keywords: [
     "staffing company",
