@@ -1,4 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Reviews UX Concept | P&R Workforce Exploration",
+  description:
+    "UX exploration of a reviews and trust-building page for a staffing company website, designed to support user confidence and future feedback integration.",
+  alternates: {
+    canonical: "/reviews",
+  },
+};
 
 const quickReasons = [
   "Need staffing support for a project or crew",

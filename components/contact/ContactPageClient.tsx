@@ -122,8 +122,8 @@ export default function ContactPageClient() {
           <div className="rounded-[30px] border border-black/10 bg-white px-6 pt-7 pb-6 shadow-[0_16px_40px_rgba(17,17,17,0.06)] md:px-8 md:pt-9 md:pb-8">
             <form onSubmit={handleSubmit} className="grid gap-6" noValidate>
               <div className="rounded-2xl border border-[#c71f25]/20 bg-[#fff6f6] px-4 py-3 text-sm leading-7 text-black/70">
-                Demo form for portfolio UX version. Messages are not sent from
-                this version of the site.
+                Demo form for UX exploration. This version demonstrates layout 
+                and user flow and does not submit messages.
               </div>
 
               <div className="rounded-2xl border border-black/8 bg-[#fafafa] p-4 sm:p-5">

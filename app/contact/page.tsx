@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ContactPageClient from "@/components/contact/ContactPageClient";
 
 export const metadata: Metadata = {
-  title: "Contact P&R Workforce LLC",
+  title: "Contact UX Concept | P&R Workforce Exploration",
   description:
-    "Contact P&R Workforce LLC for staffing support or job opportunities in Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas.",
+    "Contact page UX exploration demonstrating form structure, hierarchy, and user flow for a staffing company website redesign concept.",
   alternates: {
     canonical: "/contact",
   },

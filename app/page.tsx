@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Skilled Trades Staffing in North Carolina",
+  title: "UX Exploration: Staffing Website Redesign Concept",
   description:
-    "P&R Workforce LLC provides skilled trades staffing, temporary staffing support, temporary to hire placements, and direct hire recruiting across Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas.",
+    "UX exploration of a staffing company website redesign, focused on improving layout, hierarchy, user flow, and SEO structure across a modern Next.js implementation.",
   alternates: {
     canonical: "/",
   },
