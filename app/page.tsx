@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Skilled Trades Staffing in North Carolina",
+  description:
+    "P&R Workforce LLC provides skilled trades staffing, temporary staffing support, temporary to hire placements, and direct hire recruiting across Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const hours = [
   { day: "Monday", time: "8:00 AM - 5:00 PM" },
@@ -51,9 +61,69 @@ const jobs = [
   "/images/jobs/job06.png",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "EmploymentAgency",
+  name: "P&R Workforce LLC",
+  description:
+    "Staffing company based in Goldsboro, North Carolina, connecting employers with dependable workers and helping job seekers find opportunities across skilled trades and related industries.",
+  url: "/",
+  telephone: "+1-252-582-6094",
+  email: "info@prworkforcenc.com",
+  areaServed: [
+    "Goldsboro, NC",
+    "Raleigh, NC",
+    "Wilmington, NC",
+    "North Carolina",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Goldsboro",
+    addressRegion: "NC",
+    addressCountry: "US",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Monday",
+      opens: "08:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Tuesday",
+      opens: "08:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Wednesday",
+      opens: "08:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Thursday",
+      opens: "08:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: "08:00",
+      closes: "17:00",
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <section className="border-b border-black/10 bg-[#fcfcfc]">
         <div className="mx-auto grid max-w-[1440px] gap-8 px-5 pt-12 pb-10 sm:px-6 sm:pt-14 sm:pb-12 md:gap-10 md:py-14 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-18 lg:px-8 lg:py-24">
           <div className="max-w-[700px]">
@@ -97,7 +167,7 @@ export default function Home() {
             <div className="relative aspect-[4/3.15] w-full">
               <Image
                 src="/images/workforce.png"
-                alt="P&R Workforce staffing team on site"
+                alt="P&R Workforce LLC staffing support for skilled trades in North Carolina"
                 fill
                 className="object-cover"
                 priority
@@ -157,7 +227,7 @@ export default function Home() {
 
               <p className="mt-4 max-w-3xl text-[0.95rem] leading-7 text-black/75 sm:mt-5 sm:text-base sm:leading-8 md:text-[1.03rem]">
                 At P&amp;R Workforce LLC, we believe strong connections build
-                strong futures — on the job site and beyond. We are a staffing
+                strong futures on the job site and beyond. We are a staffing
                 company you can count on for dependable workforce support and
                 reliable opportunities.
               </p>
@@ -379,7 +449,7 @@ export default function Home() {
                 <div className="relative aspect-[4/4.45] w-full bg-[#f8f8f8]">
                   <Image
                     src={imgSrc}
-                    alt={`P&R Workforce job photo ${index + 1}`}
+                    alt={`P&R Workforce LLC job site work photo ${index + 1}`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"

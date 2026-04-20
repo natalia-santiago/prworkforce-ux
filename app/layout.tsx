@@ -11,39 +11,37 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default:
-      "P&R Workforce UX Exploration | Natalia Santiago",
-    template: "%s | P&R Workforce UX Concept",
+    default: "P&R Workforce LLC | Skilled Trades Staffing in North Carolina",
+    template: "%s | P&R Workforce LLC",
   },
 
   description:
-    "UX exploration of the P&R Workforce website, presenting an alternative design direction focused on layout, visual hierarchy, and user flow while working within the same content and business goals.",
+    "P&R Workforce LLC is a staffing company based in Goldsboro, North Carolina, connecting employers with dependable workers and helping job seekers find opportunities across skilled trades and related industries.",
 
   keywords: [
-    "staffing company",
-    "staffing agency North Carolina",
-    "construction staffing",
-    "skilled trades staffing",
-    "electrical staffing",
-    "HVAC staffing",
-    "plumbing staffing",
-    "drywall staffing",
-    "flooring staffing",
-    "tile staffing",
-    "Goldsboro staffing",
-    "Raleigh staffing",
-    "Wilmington NC staffing",
-    "North Carolina staffing company",
-    "job opportunities North Carolina",
+    "P&R Workforce LLC",
+    "staffing company North Carolina",
+    "skilled trades staffing North Carolina",
+    "construction staffing North Carolina",
     "temporary staffing North Carolina",
+    "temporary to hire North Carolina",
     "direct hire recruiting North Carolina",
+    "electrical staffing North Carolina",
+    "HVAC staffing North Carolina",
+    "plumbing staffing North Carolina",
+    "drywall staffing North Carolina",
+    "flooring staffing North Carolina",
+    "tile staffing North Carolina",
+    "Goldsboro staffing company",
+    "Raleigh staffing company",
+    "Wilmington staffing company",
+    "job opportunities North Carolina",
   ],
 
   alternates: {
-    canonical: SITE_URL,
+    canonical: "/",
   },
 
-  // ✅ FIXED FAVICON SETUP
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "P&R Workforce LLC | Skilled Trades Staffing in North Carolina",
     description:
-      "Reliable staffing support for Raleigh, Goldsboro, Wilmington, and surrounding North Carolina areas across electrical, HVAC, plumbing, drywall, flooring, tile, and other skilled trades.",
+      "Reliable staffing support for employers and opportunities for job seekers across Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas.",
     url: SITE_URL,
     siteName: "P&R Workforce LLC",
     images: [
@@ -65,7 +63,7 @@ export const metadata: Metadata = {
         url: "/images/workforce.png",
         width: 1200,
         height: 630,
-        alt: "P&R Workforce Staffing Company",
+        alt: "P&R Workforce LLC skilled trades staffing in North Carolina",
       },
     ],
     locale: "en_US",
@@ -76,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "P&R Workforce LLC | Skilled Trades Staffing in North Carolina",
     description:
-      "Reliable staffing support for Raleigh, Goldsboro, Wilmington, and surrounding North Carolina areas across electrical, HVAC, plumbing, drywall, flooring, tile, and other skilled trades.",
+      "Reliable staffing support for employers and opportunities for job seekers across Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas.",
     images: ["/images/workforce.png"],
   },
 
