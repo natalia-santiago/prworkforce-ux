@@ -11,23 +11,29 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "P&R Workforce UX Exploration | Natalia Santiago",
-    template: "%s | P&R Workforce UX Concept",
+    default: "P&R Workforce LLC | UX and SEO Exploration",
+    template: "%s | P&R Workforce LLC",
   },
 
   description:
-    "UX exploration of the P&R Workforce website, presenting an improved structure focused on layout, hierarchy, user flow, and SEO best practices while maintaining the original business goals.",
+    "UX and SEO exploration of a skilled trades staffing company serving Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas. Focused on clear structure, search visibility, and user experience.",
 
   keywords: [
-    "UX design portfolio",
-    "UX case study",
-    "website redesign concept",
+    "UX and SEO exploration",
+    "skilled trades staffing North Carolina",
+    "staffing company Goldsboro NC",
+    "staffing company Raleigh NC",
+    "staffing company Wilmington NC",
+    "temporary staffing North Carolina",
+    "direct hire recruiting North Carolina",
+    "electrical staffing North Carolina",
+    "HVAC staffing North Carolina",
+    "plumbing staffing North Carolina",
+    "drywall staffing North Carolina",
+    "flooring staffing North Carolina",
+    "service areas staffing company",
     "staffing website UX",
-    "SEO optimized website structure",
-    "Next.js UX project",
-    "P&R Workforce UX redesign",
-    "Natalia Santiago portfolio",
-    "web design and development portfolio",
+    "staffing website SEO",
   ],
 
   alternates: {
@@ -45,17 +51,17 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "P&R Workforce UX Exploration | Portfolio Project",
+    title: "P&R Workforce LLC | UX and SEO Exploration",
     description:
-      "A UX and SEO-focused redesign concept of the P&R Workforce website, created as part of a web design and development portfolio.",
+      "UX and SEO exploration of a skilled trades staffing company serving Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas.",
     url: SITE_URL,
-    siteName: "P&R Workforce UX Concept",
+    siteName: "P&R Workforce LLC",
     images: [
       {
         url: "/images/workforce.png",
         width: 1200,
         height: 630,
-        alt: "P&R Workforce UX redesign concept preview",
+        alt: "P&R Workforce LLC skilled trades staffing website preview",
       },
     ],
     locale: "en_US",
@@ -64,9 +70,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "P&R Workforce UX Exploration | Portfolio Project",
+    title: "P&R Workforce LLC | UX and SEO Exploration",
     description:
-      "UX redesign concept focused on improving layout, hierarchy, and SEO for a staffing company website.",
+      "UX and SEO exploration of a skilled trades staffing company website serving North Carolina.",
     images: ["/images/workforce.png"],
   },
 

@@ -16,6 +16,9 @@ export default function Footer() {
             connect businesses with dependable workers across multiple trades
             and industries.
           </p>
+          <p className="mt-4 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white/48 sm:text-[0.82rem]">
+            UX and SEO Exploration
+          </p>
         </div>
 
         <div>
