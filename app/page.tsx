@@ -96,7 +96,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1440px] gap-8 px-5 pt-12 pb-10 sm:px-6 sm:pt-14 sm:pb-12 md:gap-10 md:py-14 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-18 lg:px-8 lg:py-24">
           <div className="max-w-[700px]">
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#c71f25] sm:text-sm">
-              UX and SEO Exploration • Skilled Trades Staffing in North Carolina
+              Skilled Trades Staffing in North Carolina
             </p>
 
             <h1 className="mt-3 max-w-[11ch] text-[2rem] font-semibold tracking-tight text-[#111111] sm:mt-5 sm:max-w-[10.5ch] sm:text-[2.8rem] md:text-5xl lg:text-[4.15rem] lg:leading-[0.97]">

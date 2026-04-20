@@ -35,7 +35,7 @@ export default function ReviewsPage() {
       <div className="mx-auto w-full max-w-[1180px] px-6 py-16 pb-14 md:px-8 lg:py-20">
         <div className="max-w-[860px]">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#cf2027]">
-            UX and SEO Exploration • Reviews
+            Reviews
           </p>
 
           <h1 className="mt-4 max-w-[22ch] text-4xl font-semibold tracking-tight text-black sm:text-5xl lg:text-[3.5rem]">
