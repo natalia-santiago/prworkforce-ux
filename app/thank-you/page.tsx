@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Thank You | P&R Workforce LLC",
+  description:
+    "Thank you for contacting P&R Workforce LLC. Our team will review your message and follow up as soon as possible.",
+  alternates: {
+    canonical: "/thank-you",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function ThankYouPage() {
   return (

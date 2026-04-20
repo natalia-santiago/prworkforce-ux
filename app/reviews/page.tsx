@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reviews UX Concept | P&R Workforce Exploration",
+  title: "Reviews | P&R Workforce LLC",
   description:
-    "UX exploration of a reviews and trust-building page for a staffing company website, designed to support user confidence and future feedback integration.",
+    "Learn more about reviews, feedback, and future Google Business Profile updates for P&R Workforce LLC serving Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas.",
   alternates: {
     canonical: "/reviews",
   },
@@ -35,7 +35,7 @@ export default function ReviewsPage() {
       <div className="mx-auto w-full max-w-[1180px] px-6 py-16 pb-14 md:px-8 lg:py-20">
         <div className="max-w-[860px]">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#cf2027]">
-            Reviews
+            UX and SEO Exploration • Reviews
           </p>
 
           <h1 className="mt-4 max-w-[22ch] text-4xl font-semibold tracking-tight text-black sm:text-5xl lg:text-[3.5rem]">

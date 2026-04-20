@@ -77,7 +77,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-[1440px] px-5 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           <div className="max-w-[900px]">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#c71f25] sm:text-sm">
-              Services
+              UX and SEO Exploration • Services
             </p>
 
             <h1 className="mt-3 max-w-[13ch] text-[2.3rem] font-semibold tracking-tight text-[#111111] sm:text-[3rem] md:text-5xl lg:text-[3.7rem] lg:leading-[1]">
