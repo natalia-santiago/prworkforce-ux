@@ -8,7 +8,7 @@ export default function Header() {
         <Link
           href="/"
           className="flex min-w-0 items-center gap-3 transition-opacity hover:opacity-90 sm:gap-4"
-          aria-label="P&R Workforce LLC home"
+          aria-label="P&R Workforce UX and SEO Exploration home"
         >
           <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-black/10 bg-black shadow-sm sm:h-14 sm:w-14 lg:h-16 lg:w-16">
             <Image
@@ -31,7 +31,7 @@ export default function Header() {
         </Link>
 
         <nav
-          className="hidden items-center gap-8 md:flex lg:gap-9"
+          className="hidden items-center gap-6 md:flex lg:gap-8"
           aria-label="Primary navigation"
         >
           <Link
@@ -39,6 +39,18 @@ export default function Header() {
             className="text-[0.95rem] font-medium text-[#111111] transition hover:text-[#c71f25]"
           >
             Home
+          </Link>
+          <Link
+            href="/services"
+            className="text-[0.95rem] font-medium text-[#111111] transition hover:text-[#c71f25]"
+          >
+            Services
+          </Link>
+          <Link
+            href="/service-areas"
+            className="text-[0.95rem] font-medium text-[#111111] transition hover:text-[#c71f25]"
+          >
+            Service Areas
           </Link>
           <Link
             href="/contact"

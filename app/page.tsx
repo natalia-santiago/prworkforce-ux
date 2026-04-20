@@ -63,57 +63,21 @@ const jobs = [
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "EmploymentAgency",
-  name: "P&R Workforce LLC",
+  "@type": "WebSite",
+  name: "P&R Workforce UX Concept",
   description:
-    "Staffing company based in Goldsboro, North Carolina, connecting employers with dependable workers and helping job seekers find opportunities across skilled trades and related industries.",
-  url: "/",
-  telephone: "+1-252-582-6094",
-  email: "info@prworkforcenc.com",
-  areaServed: [
-    "Goldsboro, NC",
-    "Raleigh, NC",
-    "Wilmington, NC",
-    "North Carolina",
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Goldsboro",
-    addressRegion: "NC",
-    addressCountry: "US",
+    "UX exploration of the P&R Workforce website, presenting an improved structure focused on layout, hierarchy, user flow, and SEO best practices.",
+  url: "https://prworkforce-ux-concept.netlify.app/",
+  creator: {
+    "@type": "Person",
+    name: "Natalia Santiago",
   },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Monday",
-      opens: "08:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Tuesday",
-      opens: "08:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Wednesday",
-      opens: "08:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Thursday",
-      opens: "08:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Friday",
-      opens: "08:00",
-      closes: "17:00",
-    },
-  ],
+  about: {
+    "@type": "CreativeWork",
+    name: "P&R Workforce UX Exploration",
+    description:
+      "Portfolio concept showing a UX and SEO-focused exploration for a staffing company website.",
+  },
 };
 
 export default function Home() {
@@ -146,14 +110,14 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex min-h-10 w-full items-center justify-center rounded-full bg-[#c71f25] px-6 py-2 text-[0.9rem] font-semibold text-white shadow-sm transition hover:bg-[#a8171c] hover:shadow-md sm:min-h-12 sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
               >
-                Get Staff Now
+                Explore Contact Flow
               </Link>
 
               <Link
-                href="/contact"
+                href="/reviews"
                 className="inline-flex min-h-10 w-full items-center justify-center rounded-full border border-black/10 bg-white px-6 py-2 text-[0.9rem] font-semibold text-[#111111] transition hover:border-black/20 hover:bg-black/[0.03] sm:min-h-12 sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
               >
-                Browse Jobs
+                View Reviews Page Concept
               </Link>
             </div>
 
@@ -161,13 +125,17 @@ export default function Home() {
               Serving Raleigh • Goldsboro • Wilmington • Surrounding North
               Carolina areas
             </p>
+
+            <p className="mt-3 text-[0.8rem] leading-5 text-black/48 sm:text-[0.84rem] sm:leading-6">
+              UX exploration concept created by Natalia Santiago.
+            </p>
           </div>
 
           <div className="relative overflow-hidden rounded-[22px] border border-black/10 bg-[#f4f4f4] shadow-[0_14px_38px_rgba(0,0,0,0.07)] sm:rounded-[28px] lg:rounded-[30px]">
             <div className="relative aspect-[4/3.15] w-full">
               <Image
                 src="/images/workforce.png"
-                alt="P&R Workforce LLC staffing support for skilled trades in North Carolina"
+                alt="P&R Workforce UX exploration homepage preview"
                 fill
                 className="object-cover"
                 priority
@@ -323,6 +291,11 @@ export default function Home() {
             <h2 className="mt-3 max-w-[20ch] text-[1.9rem] font-semibold tracking-tight text-[#111111] sm:text-[2.2rem] md:text-4xl">
               Staffing solutions built around your project needs.
             </h2>
+            <p className="mt-4 max-w-2xl text-[0.95rem] leading-7 text-black/72 sm:text-base sm:leading-8">
+              This section demonstrates how service categories can be organized
+              clearly for scanability while guiding visitors toward the next
+              step in the experience.
+            </p>
           </div>
 
           <div className="mt-7 grid gap-3 sm:mt-9 sm:gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -343,6 +316,20 @@ export default function Home() {
                 </span>
               </div>
             ))}
+          </div>
+
+          <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#c71f25] px-6 py-3 text-[0.92rem] font-semibold text-white shadow-sm transition hover:bg-[#a8171c] hover:shadow-md sm:text-sm"
+            >
+              Explore Contact Page Concept
+            </Link>
+
+            <p className="text-sm leading-6 text-black/60">
+              This CTA shows how a service section can lead naturally into a
+              clearer next step without adding friction.
+            </p>
           </div>
         </div>
       </section>
