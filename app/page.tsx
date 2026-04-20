@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "UX Exploration: Staffing Website Redesign Concept",
+  title: "Skilled Trades Staffing in North Carolina",
   description:
-    "UX exploration of a staffing company website redesign, focused on improving layout, hierarchy, user flow, and SEO structure across a modern Next.js implementation.",
+    "P&R Workforce LLC provides skilled trades staffing, temporary staffing support, temporary-to-hire placements, and direct hire recruiting across Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas.",
   alternates: {
     canonical: "/",
   },
@@ -63,20 +63,24 @@ const jobs = [
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "P&R Workforce UX Concept",
+  "@type": "EmploymentAgency",
+  name: "P&R Workforce LLC",
   description:
-    "UX exploration of the P&R Workforce website, presenting an improved structure focused on layout, hierarchy, user flow, and SEO best practices.",
+    "P&R Workforce LLC provides staffing support for employers and job opportunities for skilled workers across North Carolina.",
   url: "https://prworkforce-ux-concept.netlify.app/",
-  creator: {
-    "@type": "Person",
-    name: "Natalia Santiago",
-  },
-  about: {
-    "@type": "CreativeWork",
-    name: "P&R Workforce UX Exploration",
-    description:
-      "Portfolio concept showing a UX and SEO-focused exploration for a staffing company website.",
+  telephone: "+1-252-582-6094",
+  email: "info@prworkforcenc.com",
+  areaServed: [
+    "Goldsboro, NC",
+    "Raleigh, NC",
+    "Wilmington, NC",
+    "North Carolina",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Goldsboro",
+    addressRegion: "NC",
+    addressCountry: "US",
   },
 };
 
@@ -110,14 +114,14 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex min-h-10 w-full items-center justify-center rounded-full bg-[#c71f25] px-6 py-2 text-[0.9rem] font-semibold text-white shadow-sm transition hover:bg-[#a8171c] hover:shadow-md sm:min-h-12 sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
               >
-                Explore Contact Flow
+                Get Staffing Support
               </Link>
 
               <Link
-                href="/reviews"
+                href="/contact"
                 className="inline-flex min-h-10 w-full items-center justify-center rounded-full border border-black/10 bg-white px-6 py-2 text-[0.9rem] font-semibold text-[#111111] transition hover:border-black/20 hover:bg-black/[0.03] sm:min-h-12 sm:w-auto sm:px-7 sm:py-3.5 sm:text-sm"
               >
-                View Reviews Page Concept
+                Find Job Opportunities
               </Link>
             </div>
 
@@ -125,17 +129,13 @@ export default function Home() {
               Serving Raleigh • Goldsboro • Wilmington • Surrounding North
               Carolina areas
             </p>
-
-            <p className="mt-3 text-[0.8rem] leading-5 text-black/48 sm:text-[0.84rem] sm:leading-6">
-              UX exploration concept created by Natalia Santiago.
-            </p>
           </div>
 
           <div className="relative overflow-hidden rounded-[22px] border border-black/10 bg-[#f4f4f4] shadow-[0_14px_38px_rgba(0,0,0,0.07)] sm:rounded-[28px] lg:rounded-[30px]">
             <div className="relative aspect-[4/3.15] w-full">
               <Image
                 src="/images/workforce.png"
-                alt="P&R Workforce UX exploration homepage preview"
+                alt="P&R Workforce staffing support in North Carolina"
                 fill
                 className="object-cover"
                 priority
@@ -292,9 +292,8 @@ export default function Home() {
               Staffing solutions built around your project needs.
             </h2>
             <p className="mt-4 max-w-2xl text-[0.95rem] leading-7 text-black/72 sm:text-base sm:leading-8">
-              This section demonstrates how service categories can be organized
-              clearly for scanability while guiding visitors toward the next
-              step in the experience.
+              We support businesses with flexible staffing options across
+              multiple trades and project needs.
             </p>
           </div>
 
@@ -320,16 +319,18 @@ export default function Home() {
 
           <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <Link
+              href="/services"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border border-black/10 bg-white px-6 py-3 text-[0.92rem] font-semibold text-[#111111] transition hover:border-black/20 hover:bg-black/[0.03] sm:text-sm"
+            >
+              View All Services
+            </Link>
+
+            <Link
               href="/contact"
               className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#c71f25] px-6 py-3 text-[0.92rem] font-semibold text-white shadow-sm transition hover:bg-[#a8171c] hover:shadow-md sm:text-sm"
             >
-              Explore Contact Page Concept
+              Contact for Staffing Support
             </Link>
-
-            <p className="text-sm leading-6 text-black/60">
-              This CTA shows how a service section can lead naturally into a
-              clearer next step without adding friction.
-            </p>
           </div>
         </div>
       </section>
@@ -436,7 +437,7 @@ export default function Home() {
                 <div className="relative aspect-[4/4.45] w-full bg-[#f8f8f8]">
                   <Image
                     src={imgSrc}
-                    alt={`P&R Workforce LLC job site work photo ${index + 1}`}
+                    alt={`P&R Workforce job site work photo ${index + 1}`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
@@ -521,6 +522,15 @@ export default function Home() {
                     </span>{" "}
                     Raleigh, Goldsboro, Wilmington, and surrounding areas
                   </p>
+                </div>
+
+                <div className="mt-5">
+                  <Link
+                    href="/service-areas"
+                    className="inline-flex min-h-10 items-center justify-center rounded-full border border-black/10 bg-white px-5 py-2 text-[0.9rem] font-semibold text-[#111111] transition hover:border-black/20 hover:bg-black/[0.03] sm:text-sm"
+                  >
+                    View Service Areas
+                  </Link>
                 </div>
               </div>
             </div>

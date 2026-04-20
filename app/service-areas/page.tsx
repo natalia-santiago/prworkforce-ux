@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Service Areas UX and SEO Exploration",
+  title: "Service Areas in North Carolina",
   description:
-    "UX and SEO exploration of a service areas page, demonstrating stronger local structure, clearer location relevance, and improved internal linking for a staffing website concept.",
+    "P&R Workforce LLC serves Goldsboro, Raleigh, Wilmington, and surrounding North Carolina areas with staffing support for employers and job opportunities for skilled workers.",
   alternates: {
     canonical: "/service-areas",
   },
@@ -14,30 +14,30 @@ const locations = [
   {
     name: "Goldsboro, NC",
     description:
-      "Presented as the core location in this concept, helping establish a strong local anchor for the site structure.",
+      "Our home base and a key service area for staffing support and job opportunities.",
   },
   {
     name: "Raleigh, NC",
     description:
-      "Included to show how a staffing website can expand service coverage while keeping regional relevance clear.",
+      "Serving employers and job seekers throughout the Raleigh area with dependable workforce support.",
   },
   {
     name: "Wilmington, NC",
     description:
-      "Used as another example of how service area content can strengthen both wayfinding and local SEO signals.",
+      "Providing staffing support and employment opportunities throughout Wilmington and surrounding communities.",
   },
   {
     name: "Surrounding North Carolina areas",
     description:
-      "Supports broader coverage while keeping the page aligned with realistic service area messaging.",
+      "We also support nearby communities across North Carolina based on project and staffing needs.",
   },
 ];
 
 const localBenefits = [
-  "Creates a dedicated destination for location based content",
-  "Strengthens local relevance beyond the homepage",
-  "Improves internal linking between key pages",
-  "Demonstrates scalable local SEO site planning",
+  "Clear service coverage for employers and job seekers",
+  "Staffing support across key North Carolina markets",
+  "Regional workforce solutions across multiple trades",
+  "Reliable communication and responsive support",
 ];
 
 export default function ServiceAreasPage() {
@@ -51,19 +51,19 @@ export default function ServiceAreasPage() {
             </p>
 
             <h1 className="mt-3 max-w-[13ch] text-[2.3rem] font-semibold tracking-tight text-[#111111] sm:text-[3rem] md:text-5xl lg:text-[3.7rem] lg:leading-[1]">
-              Location content designed for stronger local structure.
+              Proudly serving employers and job seekers across North Carolina.
             </h1>
 
             <p className="mt-5 max-w-[58rem] text-[0.98rem] leading-7 text-black/72 sm:text-[1.05rem] sm:leading-8">
-              This UX and SEO exploration adds a service areas page to show how
-              location specific structure can improve clarity for users and
-              provide stronger local signals for search engines.
+              P&amp;R Workforce supports businesses and workers throughout
+              Goldsboro, Raleigh, Wilmington, and surrounding North Carolina
+              areas.
             </p>
 
             <p className="mt-4 max-w-[56rem] text-[0.95rem] leading-7 text-black/58 sm:text-base sm:leading-8">
-              Instead of relying only on brief location mentions across the
-              homepage, this page demonstrates a more intentional local content
-              strategy.
+              Whether you are looking for dependable staffing support or seeking
+              your next job opportunity, our team is ready to help across a wide
+              service area.
             </p>
           </div>
         </div>
@@ -74,24 +74,23 @@ export default function ServiceAreasPage() {
           <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
             <div>
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[#c71f25] sm:text-sm">
-                Why this page matters
+                Where we serve
               </p>
 
               <h2 className="mt-3 max-w-[16ch] text-[1.9rem] font-semibold tracking-tight text-[#111111] sm:text-[2.3rem] md:text-4xl">
-                Local structure improves wayfinding and search relevance.
+                Regional coverage built around real workforce needs.
               </h2>
 
               <p className="mt-4 max-w-[48rem] text-[0.96rem] leading-7 text-black/72 sm:text-base sm:leading-8">
-                For users, a service areas page makes it easier to confirm where
-                the company operates. For SEO, it creates a clearer local
-                content hub and shows how the site could expand into deeper
-                geographic targeting if needed.
+                Our service areas are focused on supporting employers who need
+                dependable workers and helping job seekers connect with the
+                right opportunities across key North Carolina markets.
               </p>
             </div>
 
             <div className="rounded-[28px] border border-black/10 bg-[#fafafa] p-6 shadow-sm sm:p-7">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/55 sm:text-sm">
-                Exploration goals
+                Area highlights
               </p>
 
               <ul className="mt-5 space-y-3">
@@ -145,29 +144,29 @@ export default function ServiceAreasPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
             <div className="rounded-[28px] border border-black/10 bg-[#fcfcfc] p-6 shadow-sm sm:p-8">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[#c71f25] sm:text-sm">
-                UX takeaway
+                For employers
               </p>
               <h2 className="mt-3 max-w-[16ch] text-[1.85rem] font-semibold tracking-tight text-[#111111] sm:text-[2.2rem] md:text-4xl">
-                Dedicated location content reduces ambiguity for users.
+                Find workforce support in the areas you need most.
               </h2>
               <p className="mt-4 text-[0.96rem] leading-7 text-black/72 sm:text-base sm:leading-8">
-                Rather than making users search across different sections for
-                location clues, a dedicated page makes service coverage easier
-                to confirm and easier to trust.
+                We help businesses across our service areas connect with
+                dependable workers for temporary needs, project support, and
+                longer term placements.
               </p>
             </div>
 
             <div className="rounded-[28px] border border-black/10 bg-[#111111] p-6 text-white shadow-[0_14px_34px_rgba(0,0,0,0.14)] sm:p-8">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[#ff6a6f] sm:text-sm">
-                SEO takeaway
+                For job seekers
               </p>
               <h2 className="mt-3 max-w-[15ch] text-[1.85rem] font-semibold tracking-tight sm:text-[2.2rem] md:text-4xl">
-                A service areas page supports stronger local SEO architecture.
+                Explore opportunities across North Carolina.
               </h2>
               <p className="mt-4 text-[0.96rem] leading-7 text-white/75 sm:text-base sm:leading-8">
-                This page demonstrates how local intent can be supported through
-                a cleaner structure today and expanded later into individual
-                city pages if the project ever needed deeper local targeting.
+                We work with job seekers across multiple regions, helping match
+                skills and experience with the right opportunities in our
+                service areas.
               </p>
             </div>
           </div>
@@ -177,14 +176,14 @@ export default function ServiceAreasPage() {
               href="/services"
               className="inline-flex min-h-11 items-center justify-center rounded-full border border-black/10 bg-white px-6 py-3 text-[0.92rem] font-semibold text-[#111111] transition hover:border-black/20 hover:bg-black/[0.03] sm:text-sm"
             >
-              View Services Concept
+              View Services
             </Link>
 
             <Link
               href="/contact"
               className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#c71f25] px-6 py-3 text-[0.92rem] font-semibold text-white shadow-sm transition hover:bg-[#a8171c] hover:shadow-md sm:text-sm"
             >
-              Explore Contact Page Concept
+              Contact Us
             </Link>
           </div>
         </div>

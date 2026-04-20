@@ -16,10 +16,6 @@ export default function Footer() {
             connect businesses with dependable workers across multiple trades
             and industries.
           </p>
-          <p className="mt-4 text-sm leading-6 text-white/52">
-            UX and SEO exploration concept created by Natalia Santiago for
-            portfolio purposes.
-          </p>
         </div>
 
         <div>
@@ -73,8 +69,8 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1440px] flex-col gap-2 px-5 py-5 text-sm text-white/58 sm:gap-3 sm:px-6 sm:py-6 md:flex-row md:items-center md:justify-between lg:px-8">
           <div className="flex flex-col gap-1.5 md:flex-row md:items-center md:gap-4">
-            <p>© {year} P&amp;R Workforce UX and SEO Exploration.</p>
-            <p>Portfolio concept for UX, SEO, and information architecture.</p>
+            <p>© {year} P&amp;R Workforce LLC. All rights reserved.</p>
+            <p>Skilled Trades Staffing in North Carolina</p>
           </div>
 
           <a
