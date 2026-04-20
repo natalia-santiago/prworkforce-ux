@@ -60,7 +60,7 @@ export default function ReviewsPage() {
             </p>
           </div>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="mt-9 flex flex-col gap-5 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <Link
               href="/contact"
               className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-[#cf2027] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(207,32,39,0.18)] transition hover:-translate-y-0.5 hover:opacity-95"

@@ -10,13 +10,13 @@ export default function Footer() {
           <p className="text-[1.08rem] font-semibold tracking-tight text-white sm:text-[1.18rem] lg:text-[1.22rem]">
             P&amp;R Workforce LLC
           </p>
-          <p className="mt-3 max-w-sm text-sm leading-7 text-white/78 sm:mt-4">
+          <p className="mt-3 max-w-sm text-sm leading-6 text-white/78 sm:mt-4 sm:leading-7">
             Reliable staffing company based in Goldsboro, serving Raleigh,
             Goldsboro, Wilmington, and surrounding North Carolina areas. We
             connect businesses with dependable workers across multiple trades
             and industries.
           </p>
-          <p className="mt-4 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white/48 sm:text-[0.82rem]">
+          <p className="mt-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white/48 sm:mt-4 sm:text-[0.82rem]">
             UX and SEO Exploration
           </p>
         </div>
