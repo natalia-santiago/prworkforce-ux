@@ -59,12 +59,6 @@ const jobs = [
   "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180177/job04_trtejf.png",
   "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180184/job05_qv10hk.jpg",
   "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180178/job06_uqgwhc.png",
-  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180177/job07_d13gvv.png",
-  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180181/job08_zk00pi.png",
-  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180181/job09_g07jsw.png",
-  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180185/job10_kuqjbj.jpg",
-  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180182/job11_lj5j7t.png",
-  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180182/job12_snfwl4.png",
 ];
 
 const jsonLd = {
