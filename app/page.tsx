@@ -53,12 +53,18 @@ const hiringAreas = [
 ];
 
 const jobs = [
-  "/images/jobs/job01.png",
-  "/images/jobs/job02.png",
-  "/images/jobs/job03.png",
-  "/images/jobs/job04.png",
-  "/images/jobs/job05.jpeg",
-  "/images/jobs/job06.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180175/job01_ejeicv.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180176/job02_yseov1.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180176/job03_f8t6md.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180177/job04_trtejf.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180184/job05_qv10hk.jpg",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180178/job06_uqgwhc.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180177/job07_d13gvv.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180181/job08_zk00pi.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180181/job09_g07jsw.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180185/job10_kuqjbj.jpg",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180182/job11_lj5j7t.png",
+  "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180182/job12_snfwl4.png",
 ];
 
 const jsonLd = {
@@ -134,7 +140,7 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-[22px] border border-black/10 bg-[#f4f4f4] shadow-[0_14px_38px_rgba(0,0,0,0.07)] sm:rounded-[28px] lg:rounded-[30px]">
             <div className="relative aspect-[4/3.15] w-full">
               <Image
-                src="/images/workforce.png"
+                src="https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778180166/workforce_didf3o.png"
                 alt="P&R Workforce staffing support in North Carolina"
                 fill
                 className="object-cover"
